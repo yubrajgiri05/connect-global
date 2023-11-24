@@ -1,0 +1,72 @@
+.jobs-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0px;
+  grid-auto-rows: 250px;
+  overflow: hidden;
+  .job-category-description {
+    padding: 50px 100px;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .job-category-card {
+    figure {
+      position: relative;
+      height: 100%;
+      background: linear-gradient(
+        0deg,
+        rgba(22, 24, 17, 1) 0%,
+        rgba(22, 24, 17, 1) 100%
+      );
+      transition: all 400ms linear;
+      img {
+        opacity: 0.5;
+      }
+      figcaption {
+        @include center;
+        h2 {
+          color: #fff;
+          text-align: justify;
+          font-family: Open Sans;
+          font-size: 24px !important;
+          font-weight: 700;
+          letter-spacing: 0.1px;
+          text-align: center;
+        }
+        .vaccancy-no {
+          color: #fdfdfd;
+          font-family: Open Sans;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          opacity: 0;
+          transition: all 400ms linear;
+          text-align: center;
+        }
+        @media (max-width: 1400px) {
+          h2 {
+            font-size: 20px !important;
+          }
+        }
+      }
+    }
+    &:hover {
+      figure {
+        background: linear-gradient(
+          0deg,
+          rgba(0, 51, 102, 0.808) 0%,
+          rgba(0, 51, 102, 0.842) 100%
+        );
+        figcaption {
+          .vaccancy-no {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

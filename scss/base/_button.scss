@@ -1,0 +1,51 @@
+.custom-button {
+  a,
+  button {
+    border-radius: 20px;
+    border: 1px solid #0033b7;
+    background: #0033b7;
+    color: #fcf7f8;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    padding: 8px 15px;
+  }
+}
+
+.custom-button-second {
+  position: relative;
+  a {
+    color: #0033b7 !important;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    padding-left: 16px;
+    background-color: white;
+    width: fit-content;
+    margin-left: auto;
+    display: block;
+  }
+  &:before {
+    content: "";
+    background-color: blue;
+    height: 1.5px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 0;
+    z-index: -99;
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    &:before {
+      content: "";
+      width: 100%;
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.joblisting-detail {
+    position: relative;
+    .job-description {
+        position: relative;
+        padding-right: 6vw;
+        .text-document-content {
+            h2 {
+                color: #161811 !important;
+            }
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top:-100px;
+            right: 0;
+            width: 1px;
+            height: 150%;
+            background-color: #DDD;;
+            z-index: -2;
+        }
+        
+    }
+
+    .job-details {
+        padding-left: 6vw;
+        align-items: center;
+        position: sticky !important;
+        top: 0px !important;
+        h2 {
+            color: #161811;
+            font-family: Oswald;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .d-flex {
+            span {
+                color: #000;
+                font-family: Open Sans;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            p {
+                color: #000;
+                font-family: Open Sans;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+        .button {
+            border-radius: 20px;
+            border: 1px solid #0033B7;
+            background: #0033B7;
+            @include flex-center;
+            color: white !important;
+            padding: 8px 56px;
+            width: fit-content;
+            margin: 0 auto;
+        }
+    }
+}

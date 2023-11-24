@@ -1,0 +1,63 @@
+.demand-letter-card {
+  border-radius: 4px;
+  border: 1px solid #a4a4a4;
+  padding: 20px;
+  figure {
+    height: 400px;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    @media(max-width:1400px){
+        height: 300px;
+
+    }
+    img {
+      transition: 300ms linear;
+      object-fit: contain;
+    }
+    &::after {
+      content: "\f00e";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: white;
+      @include center;
+      font-size: 36px;
+      transition: 300ms linear;
+      opacity: 0;
+      pointer-events: none;
+    }
+    &:hover {
+      img {
+        opacity: 0.5;
+      }
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  .details {
+    margin-top: 20px;
+    @include space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    ul {
+      li {
+        color: #696969;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding-bottom: 10px;
+        &:last-child {
+          padding-bottom: 0px;
+        }
+        img {
+          height: 30px;
+          width: 30px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.pagination {
+  margin-top: 50px !important;
+  justify-content: center !important;
+  --bs-pagination-hover-bg: none !important;
+  .page-item {
+    margin-left: 6px !important;
+    &:first-child {
+      margin-left: 0px !important;
+    }
+    .page-link {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 166.5%;
+      text-transform: capitalize;
+      text-align: center;
+      color: #696969 !important;
+      border: none !important;
+      @include flex-center;
+      &:hover {
+        color: #696969 !important;
+        background-color: none !important;
+        &::after{
+          content: "";
+          background: rgb(58, 29, 219);
+          height: 2px;
+          width: 50%;
+          position: absolute;
+          bottom: 0;
+        }
+      }
+     
+      &:focus {
+        z-index: 3;
+       background: white !important;
+        outline: 0;
+        box-shadow: none !important;
+      }
+    }
+  }
+  .active {
+    .page-link {
+      background: white;
+      &::after{
+        content: "";
+        background: rgb(58, 29, 219);
+        height: 2px;
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}

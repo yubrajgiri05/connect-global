@@ -1,0 +1,141 @@
+.joblisting {
+    .job-listing-content {
+        background: #FCF7F8;
+        padding-left: 8vw;
+        padding-right: 3vw;
+
+      a{
+        figure {
+            width: 108px;
+
+            img {
+                object-fit: cover;
+            }
+      }
+        }
+
+        .job-content {
+            width: 100% !important;
+
+            .job-title {
+                color: #161811;
+                font-family: Open Sans;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 131%;
+                text-transform: capitalize;
+                padding-bottom: 4px;
+            }
+
+            .job-salary {
+                color: #696969;
+                font-family: Open Sans;
+                font-size: 16px;
+                font-weight: 400;
+                padding-bottom: 8px;
+            }
+
+            .job-location {
+                color: #6079C5;
+                font-family: Open Sans;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 131%;
+                text-transform: capitalize;
+            }
+
+            .job-icon {
+                color: #696969;
+                font-size: 16px;
+            }
+        }
+
+        .job-add-expire {
+            .job-add {
+                p {
+                    color: #696969;
+                    font-family: Open Sans;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+
+            .job-expire {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: end;
+
+                p {
+                    color: red;
+                    font-family: Open Sans;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                a {
+                    color: blue !important;
+                }
+            }
+        }
+    }
+
+    .job-listing-form {
+        background: #E5F4F9;
+
+        .job-filter-wrapper{
+            padding-left: 10%;
+            position: sticky;
+            top: 180px;
+            .filter-job {
+                color: #036;
+                font-family: Open Sans;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin-bottom: 20px;
+            }
+            form {
+                label {
+                    color: #036;
+                    font-family: Open Sans;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    padding-bottom: 10px;
+                }
+    
+                input,
+                select {
+                    border-radius: 4px;
+                    border: 1px solid #6079C5;
+                    padding: 5px 8px;
+                    width: 70%;
+                }
+                .error-message {
+                    color: #ff4848;
+                    font-style: italic;
+                    font-weight: 400 !important;
+                    font-size: 14px !important;
+                    letter-spacing: 1px;
+                    padding-top: 8px;
+                }
+                .btn {
+                    border-radius: 20px;
+                    border: 1px solid #0033B7;
+                    background: #0033B7;
+                    @include flex-center;
+                    color: white;
+                }
+            }
+        }
+    }
+}

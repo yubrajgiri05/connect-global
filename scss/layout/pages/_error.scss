@@ -1,0 +1,49 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .d-flex {
+        figure {
+            img {
+                width: 326px;
+                height: 284px;
+            }
+        }
+
+        p {
+            color: #B2B0F7;
+            font-family: Oswald;
+            font-size: 200px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 200px;
+            text-transform: capitalize;
+        }
+    }
+
+    span {
+        color: #161811;
+        font-family: Open Sans;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100px;
+        text-transform: capitalize;
+    }
+
+    p {
+        color: #696969;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    .button{
+        padding: 8px 16px;
+        border: 1px solid blue;
+        border-radius: 20px;
+    }
+}

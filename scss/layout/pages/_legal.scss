@@ -1,0 +1,63 @@
+.Legal-letter {
+    .section-padding {
+        padding-bottom: 10px !important;
+
+        h1,
+        h2 {
+            color: #161811;
+            font-family: Open Sans;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding-bottom: 40px !important;
+        }
+
+        .legal-card {
+            height: 500px;
+
+            figure {
+                height: 400px;
+                position: relative;
+                overflow: visible;
+
+                @media(max-width:1400px) {
+                    height: 300px;
+
+                }
+
+                img {
+                    transition: 300ms linear;
+                    object-fit: cover;
+                }
+
+                figcaption {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateY(-50%);
+                    color: #696969;
+                    text-align: center;
+                    font-family: Open Sans;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 30px;
+                    visibility: hidden;
+                    transition: ease-in 12s linear;
+                }
+
+                &:hover {
+                    img {
+                        transform: translateY(-15%);
+                    }
+
+                    figcaption {
+                        visibility: visible;
+                    }
+                }
+            }
+
+        }
+    }
+}

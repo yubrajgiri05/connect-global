@@ -1,0 +1,115 @@
+.news {
+    .g-5, .gx-5 {
+        --bs-gutter-x: 1.5rem !important;
+    }
+    .news-card {
+        border-radius: 4px !important;
+        border: none !important;
+        overflow: hidden;
+        height: 100%;
+
+        figure {
+            height: 270px !important;
+            overflow: hidden;
+            position: relative;
+
+            figcaption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #161811;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 6px 12px;
+                gap: 4px;
+
+                p {
+                    color: #FCF7F8;
+                    text-align: right;
+                    font-family: Open Sans;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 18px;
+                }
+            }
+        }
+
+        .card-body {
+            padding: 16px 2px !important;
+
+            .card-title {
+                color: #161811;
+                font-family: Oswald;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding-bottom: 8px !important;
+                display: -webkit-box;
+                -webkit-line-clamp: 1 !important;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            .card-text {
+                color: #696969;
+                text-align: justify;
+                font-family: Open Sans;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 30px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2 !important;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding-bottom: 8px;
+            }
+
+            .read-more {
+                position: relative;
+
+                span {
+                    color: #0033B7;
+                    font-family: Open Sans;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 18px;
+                    background-color: white;
+                    padding: 6px;
+                    position: relative;
+                    z-index: 4;
+                }
+
+                &:before {
+                    content: '';
+                    background-color: #0033B7;
+                    height: 1px;
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: -110%;
+                    z-index: 1;
+                    transition: all 500ms ease;
+
+                }
+            }
+        }
+
+        &:hover {
+            .card-body {
+                .read-more {
+                    &::before {
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

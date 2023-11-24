@@ -1,0 +1,117 @@
+.team-details-slider {
+  margin: 50px 0px;
+  .team-dtails-card {
+    @include d-flex;
+    gap: 100px;
+    .details {
+      .name {
+        color: #161811;
+        font-family: Open Sans;
+        font-size: 36px !important;
+        font-weight: 400;
+        line-height: 36px;
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 10px !important;
+        &::after {
+          content: "";
+          height: 1px;
+          width: 0px;
+          background: #696969;
+          position: absolute;
+          bottom: -5px;
+          left: 0px;
+          transition: all 400ms linear;
+        }
+      }
+      .post {
+        color: #161811;
+        font-size: 16px;
+      }
+    }
+    .cover-photo {
+      figure {
+        height: 420px;
+        aspect-ratio: 1;
+        img {
+          transition: all 400ms linear;
+        }
+      }
+    }
+    &:hover {
+      .name {
+        &::after {
+          content: "";
+          width: 100%;
+        }
+      }
+      .cover-photo {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+.team-category-filter {
+  .nav-tabs {
+    border: none !important;
+    .nav-link {
+      color: #696969;
+      font-family: Open Sans;
+      font-size: 16px;
+      font-weight: 400;
+      border: none !important;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      &::before {
+        content: "";
+        height: 15px;
+        width: 15px;
+        border: 1px solid #696969;
+        border-radius: 50%;
+      }
+    }
+    .nav-link.active {
+      color: #161811 !important;
+      &::before {
+        background-color: #161811;
+        border: 1px solid #161811;
+      }
+    }
+  }
+}
+
+.team-category-slider {
+  margin-top: 30px;
+  .current{
+    .team-card {
+      figure {
+        border: 1px solid #696969;
+        img {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+  .team-card {
+    figure {
+      height: 100px;
+      aspect-ratio: 1;
+      img {
+        transition: all 400ms ease-in-out;
+      }
+    }
+    &:hover {
+      figure {
+        border: 1px solid #696969;
+        img {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+
+}

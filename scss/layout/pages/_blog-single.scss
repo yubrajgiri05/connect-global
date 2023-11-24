@@ -1,0 +1,28 @@
+.blogs-single {
+
+    .main-title {
+        font-weight: 500 !important;
+    }
+
+    .d-flex {
+        .blog-date {
+            color: #696969;
+            font-family: Open Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 30px;
+        }
+    }
+    .text-document-content{
+        padding: 40px 0;
+        p{
+            text-align: justify;
+        }
+    }
+    .blog-share{
+        gap: 20px;
+        font-size: 26px;
+        color: #696969;
+    }
+}

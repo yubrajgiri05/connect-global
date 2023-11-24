@@ -1,0 +1,210 @@
+//about-us
+.about-us {
+  overflow-x: hidden;
+  .about-us-text-wrapper {
+    padding: 60px 20px 40px 120px;
+    .text-document-content {
+      text-align: justify;
+      .story {
+        position: relative;
+        span {
+          color: #0033b7 !important;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 18px;
+          padding-left: 16px;
+          background-color: white;
+        }
+        &:before {
+          content: "";
+          background-color: blue;
+          height: 1.5px;
+          width: 100%;
+          display: block;
+          position: absolute;
+          top: 9px;
+          left: 0;
+          width: 0;
+          z-index: -99;
+          transition: all 0.3s ease;
+        }
+
+        &:hover {
+          &:before {
+            content: "";
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  figure {
+    overflow: hidden;
+    max-height: 700px !important;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.mission-statement {
+  background: url("../images/texture.jpg");
+  @include background-property;
+  .heading {
+    color: #036;
+    font-family: Open Sans;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px !important;
+  }
+  p {
+    color: $primary-color;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 32px !important;
+    line-height: 36px !important;
+    font-weight: 300;
+  }
+}
+.core-values-objective-wrapper {
+  .aside-cover-images {
+    position: sticky !important;
+    top: 120px;
+    height: calc(100vh - 120px);
+    figure {
+      height: 100%;
+    }
+  }
+  .section-wrapper {
+    padding: 60px 80px 40px 20px;
+    .core-value-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      .core-value-item {
+        .icon-heading {
+          @include d-flex;
+          gap: 10px;
+          h3 {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      margin: 0px !important;
+      li {
+        display: flex;
+        gap: 10px;
+        position: relative;
+        &::before {
+          content: "\f024";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 400;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+.ceo-message {
+  background: url("../images/texture.jpg");
+  @include background-property;
+  .message-card {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    .ceo-cover {
+      figure {
+        width: 200px;
+        border-radius: 8px;
+      }
+    }
+    .details {
+      p {
+        color: #696969;
+        font-family: Open Sans;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 300 !important;
+        line-height: 40px;
+        text-align: justify;
+      }
+      .name-post {
+        margin-top: 20px;
+        .name {
+          color: #161811;
+          font-family: Open Sans;
+          font-size: 16px;
+          font-weight: 600;
+        }
+        .post {
+          color: #696969;
+          font-family: Open Sans;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+.timeline-history {
+  .nav-item-wrapper {
+    figure {
+      img {
+        object-fit: scale-down !important;
+      }
+    }
+    height: 440px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px dashed #036;
+    @include flex-center;
+    position: relative;
+    .timeline-dots {
+      @include center;
+      .nav-item {
+        position: absolute;
+        margin: -10px;
+        $angle: (360 / 5);
+        $rot: -90;
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            transform: rotate($rot * 1deg) translate(220px) !important;
+          }
+          $rot: $rot + $angle;
+        }
+
+        .nav-link {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: $primary-color;
+          border: 5px solid $primary-color;
+          padding: 0px !important;
+        }
+        .nav-link.active {
+          background: linear-gradient(180deg, #036 0%, #0033b7 100%);
+          filter: drop-shadow(0px 0px 8px #6079c5);
+        }
+      }
+    }
+  }
+  .tab-nav-wrapper {
+    @include space-between;
+    .tab_nav {
+      color: #0033b7 !important;
+      font-family: Open Sans;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 30px;
+      cursor: pointer;
+    }
+  }
+}

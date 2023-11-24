@@ -1,0 +1,102 @@
+.contact-us-page {
+  .contact-us-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 800px;
+  }
+  .aside-figure {
+    figure {
+      height: 100%;
+    }
+  }
+  .contact-us-form {
+    padding: 80px 150px 80px 40px;
+    .form-label {
+      color: #696969;
+      font-family: Open Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    .form-control {
+      &::placeholder {
+        color: #a4a4a4;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    .button-wrapper {
+      margin-top: 40px;
+      @include space-between;
+    }
+  }
+  .google-map {
+    display: none;
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .contact-information {
+    display: none;
+    padding: 80px 40px 80px 150px;
+    .contact-information-wrapper {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      ul {
+        margin-top: 40px !important;
+        li {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 35px;
+          color: #696969;
+          font-family: Open Sans;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          .wrapper {
+            display: flex;
+            gap: 5px;
+          }
+          a {
+            color: #696969;
+            font-family: Open Sans;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            &:hover {
+              color: $primary-color !important;
+            }
+          }
+          i {
+            font-size: 30px;
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+  .send-message-btn,
+  .locate-us-button {
+    color: #0033b7 !important;
+    text-align: justify;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    cursor: pointer;
+  }
+  .send-message-btn {
+    text-align: right;
+    display: block;
+  }
+}
